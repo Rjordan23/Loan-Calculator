@@ -262,6 +262,46 @@ nav p {
     width: 450px;
 }
 
+
+/* //////////////////////////// */
+#travel-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-box-long {
+    /* max-width: 600px; */
+    /* background: red; */
+}
+
+
+
+.box0 {
+    grid-area: box0;
+}
+
+.box1 {
+    grid-area: box1;
+}
+.box2 {
+    grid-area: box2;
+}
+.box3 {
+    grid-area: box3;
+}
+.box4 {
+    grid-area: box4;
+}
+
+
+
+
+
+
+
+
 /* ////////////////////////// */
 #test {
     height: 600px;
