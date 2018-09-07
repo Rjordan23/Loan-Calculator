@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -160,12 +161,33 @@ nav p {
 }
 
 /* //// Rental Promo ///// */
-#rental-car img {
-    width: 110%;
+#rental-promo {
+    display: grid;
+    width: 90%;
+    margin: 25px auto 0 auto;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
 }
 
-#rental-promo h3, #rental-promo h4:nth-of-type(2)  {
-    font-weight: 700;
+/* Left Div */
+.rental-car {
+    grid-column: 1 / 2;
+    margin: auto auto;
+}
+
+.rental-car img {
+    width: 90%;
+}
+
+/* Center Div */
+.rental-sale {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.rental-sale h3 {
+    margin-top: 10px;
 }
 
 #rental-promo h4:nth-of-type(1) {
@@ -176,11 +198,31 @@ nav p {
     border-radius: 20px;
 }
 
+#rental-promo h3, #rental-promo h4:nth-of-type(2)  {
+    font-weight: 600;
+}
+
+/* Right Div */
+.rental-cta {
+    margin:  0 auto;
+    display: grid;
+    grid-auto-rows: 80px 60px 60px;
+    text-align: center;
+    /* padding-top: 15px; */
+}
+
+.rental-cta ul {
+    margin: 0 auto;
+}
+
 #rental-promo ul li img {
     width: 85px;
 }
 
 /* //////// Hotel Promo ///////// */
+#hotel-promo {
+    margin: 35px 0;
+}
 #hotel-promo h4 {
     font-weight: 700;
 }
@@ -246,6 +288,37 @@ nav p {
 .special-cta {
     position: absolute;
 }
+
+/* email entry section */
+#email-campaign {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 60px;
+    margin: 25px auto 0 auto;
+}
+
+#email-campaign p, #email-campaign h5 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+#email-campaign h5 {
+    color: #007BFF;
+}
+
+#email-campaign input {
+    width:50%;
+    padding: 8px 0 8px 8px;
+    border: none;
+    background: #C7D3DD;
+
+    -webkit-box-shadow: -2px 11px 56px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 11px 56px -15px rgba(0,0,0,0.75);
+    box-shadow: -2px 11px 56px -15px rgba(0,0,0,0.75);
+}
+
+
 
 /* ////// Mobile /////// */
 #mobile-app {
