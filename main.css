@@ -94,6 +94,12 @@ nav p {
     color: #fff;
 }
 
+#hero img {
+    height: 65px;
+    /* margin-left: 60px; */
+    border-radius: 10px;
+}
+
 .search-form {
     position: absolute;
     top: 50%;
@@ -164,7 +170,7 @@ nav p {
 #rental-promo {
     display: grid;
     width: 86%;
-    margin: 25px auto 0 auto;
+    margin: 55px auto 0 auto;
     grid-gap: 1em;
     grid-template-columns: 1fr 1.1fr .9fr;
     grid-auto-rows: minmax(200px, auto);
@@ -342,6 +348,10 @@ nav p {
     background: #E8EEF2;
     border-top: 1px solid #BFBFBF;
     border-bottom: 1px solid #BFBFBF;
+}
+
+.apps {
+    width: 98px;
 }
 
 #stripe {
