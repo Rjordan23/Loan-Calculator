@@ -11,6 +11,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+select {
+    border: none;
+}
+
 ul li {
     display: inline;
 }
@@ -96,7 +100,6 @@ nav p {
 
 #hero img {
     height: 65px;
-    /* margin-left: 60px; */
     border-radius: 10px;
 }
 
@@ -166,11 +169,12 @@ nav p {
     color: #c7c7c7;
 }
 
+
 /* //// Rental Promo ///// */
 #rental-promo {
     display: grid;
     width: 86%;
-    margin: 55px auto 0 auto;
+    margin: 5px auto 0 auto;
     grid-gap: 1em;
     grid-template-columns: 1fr 1.1fr .9fr;
     grid-auto-rows: minmax(200px, auto);
@@ -371,31 +375,38 @@ nav p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(150px, auto);
-    grid-gap: 1em;
+    grid-gap: .5em;
 }
 
 .box0 {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
-    background: yellow;
+    background-image: url('images/miami.jpg');
+    background-size: 100%;
+    background-position-y: 80%;
 }
 
 .box1 {
     grid-column: 3 / 3;
     grid-row: 1 / 3;
-    background: red;
+    background-image: url('images/bangkok.jpg');
+    background-size: cover;
 }
 
 .box2 {
     grid-column: 1 / 2;
     grid-row: 3 / 5;
-    background: blue;
+    background-image: url('images/vegas.jpg');
+    background-position: center;
+    background-size: cover; 
 }
 
 .box3 {
-    background: green;
     grid-column: 2 / 3;
     grid-row: 3 / 5;
+    background-image: url('images/greece.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .box4 {

@@ -161,18 +161,40 @@
                             <div class="row mt-2">
                                 <div class="col-3 py-1 px-0 mr-1 form-box">
                                     <p class="col-12 m-0 ml-4">Departing</p>
-                                    <i class="far fa-calendar-alt col-1 px-0 pl-2 mt-1 text-center"></i>
-                                    <input class="col-10 pl-3 pr-0" type="date" placeholder="mm/dd/yyyy">
+                                    <i class="far fa-calendar-alt px-0 pl-2 mt-1 text-center"></i>
+                                    <input class="col-10 pl-2 pr-0" type="date" placeholder="mm/dd/yyyy">
                                 </div>
                                 <div class="col-3 py-1 px-0 mr-1 form-box">
                                     <p class="col-12 m-0 ml-4">Returning</p>
-                                    <i class="far fa-calendar-alt col-1 px-0 pl-2 mt-1 text-center"></i>
-                                    <input class="col-10 pl-3 pr-0" type="date" placeholder="mm/dd/yyyy">
+                                    <i class="far fa-calendar-alt px-0 pl-2 mt-1 text-center"></i>
+                                    <input class="col-10 pl-2 pr-0" type="date" placeholder="mm/dd/yyyy">
                                 </div>
                                 <div class="col-4 py-1 px-0 form-box">
                                     <p class="col-12 m-0 ml-4">Travelers</p>
                                     <i class="fas fa-users col-2 px-0 pl-2 mt-1 text-center"></i>
-                                    <input class="col-9 pr-0" type="text" placeholder="1 Adult, 0 Kids, 1 room">
+                                    <!-- <input class="col-9 pr-0" type="text" placeholder="1 Adult, 0 Kids, 1 room"> -->
+                                    <select value="rooms">
+                                        <option name="1room" id="">1 Room</option>
+                                        <option name="2rooms" id="">2 Rooms</option>
+                                        <option name="3rooms" id="">3 Rooms</option>
+                                        <option name="4rooms" id="">4 Rooms</option>
+                                        <option name="5rooms" id="">5 Rooms</option>
+                                        <option name="6rooms" id="">6 Rooms</option>
+                                        <option name="plusSixRooms" id="">6+ Rooms</option>
+                                    </select>
+                                    <select class="" name="guest" id="">
+                                        <option value="1guest">1 Guest</option>
+                                        <option value="2guest">2 Guest</option>
+                                        <option value="3guest">3 Guest</option>
+                                        <option value="4guest">4 Guest</option>
+                                        <option value="5guest">5 Guest</option>
+                                        <option value="6guest">6 Guest</option>
+                                        <option value="7guest">7 Guest</option>
+                                        <option value="8guest">8 Guest</option>
+                                        <option value="9guest">9 Guest</option>
+                                        <option value="10guest">10+ Guest</option>
+                                    </select>
+
                                 </div>
                             </div>
                             <div class="row mt-3">
@@ -207,67 +229,29 @@
         </div>
     </section>
     
-    <!-- Rental Promo -->
-    <!-- <section id="rental-promo" class="container-fluid">
-        <div class="row px-5">
-            <div id="rental-car" class="col-lg-4 text-center pt-lg-2">
-                <img src="images/mustang.png" alt="">
-            </div>
-            <div class="col-lg-5 pl-lg-5 pt-lg-5 pr-lg-0">
-                <div class="pl-lg-5 pt-lg-5">
-                    <h4>Limited Time </h4>
-                    <h3 class="mt-2">RENTAL CAR <span class="text-primary">SPECIAL!</span></h3>
-                    <h4 class="text-muted">Save up to 25% on Rentals*</h4>
-                </div>
-            </div>
-            <div class="col-lg-3 pt-lg-5 px-lg-0">
-                <ul class="pt-lg-4">
-                    <li><img src="images/logo/davis.png" alt=""></li>
-                    <li><img src="images/logo/cheapo.png" alt=""></li>
-                </ul>
-                <div class="ml-4">
-                    <button class="myButton py-2">Reserve Now</button>
-                    <p class="text-muted pl-4">*View terms</p>
-                </div>
+    <section id="rental-promo">
+        <div class="rental-car">
+            <img src="images/2016-Ford-Mustang-2.png" alt="">
+        </div>
+        <div class="rental-sale">
+            <h4>Limited Time </h4>
+            <h3 class="">RENTAL CAR <span class="text-primary">Sale!</span></h3>
+            <h4 class="">Save up to 25% on Rentals</h4>
+        </div>
+        <div class="rental-cta">
+            <ul class="">
+                <li><img src="images/logo/davis.png" alt=""></li>
+                <li><img src="images/logo/cheapo.png" alt=""></li>
+            </ul>
+            <ul>
+                <li><img src="images/logo/last-dollar.png" alt=""></li>
+                <li><img src="images/logo/risky.png" alt=""></li>
+            </ul>
+            <div class="">
+                <button class="myButton">Reserve Now</button>
             </div>
         </div>
-    </section> -->
-
-    <!-- Rental Promo -->
-    <!-- <section id="rental-promo" class="">
-        <div class="new">
-            <p>Red</p>
-        </div>
-        <div class="new">
-            <p>Blue</p>
-        </div>
-        <div class="new">
-            <p>Yellow</p>
-        </div>
-    </section> -->
-        <section id="rental-promo">
-            <div class="rental-car">
-                <img src="images/2016-Ford-Mustang-2.png" alt="">
-            </div>
-            <div class="rental-sale">
-                <h4>Limited Time </h4>
-                <h3 class="">RENTAL CAR <span class="text-primary">Sale!</span></h3>
-                <h4 class="">Save up to 25% on Rentals</h4>
-            </div>
-            <div class="rental-cta">
-                <ul class="">
-                    <li><img src="images/logo/davis.png" alt=""></li>
-                    <li><img src="images/logo/cheapo.png" alt=""></li>
-                </ul>
-                <ul>
-                    <li><img src="images/logo/last-dollar.png" alt=""></li>
-                    <li><img src="images/logo/risky.png" alt=""></li>
-                </ul>
-                <div class="">
-                    <button class="myButton">Reserve Now</button>
-                </div>
-            </div>
-        </section>
+    </section>
 
     <!-- Hotel Promo -->
     <section id="hotel-promo" class="pb-3">
@@ -279,7 +263,7 @@
         <div id="hotel-specials" class="px-0">
             <!-- Special 1 -->
             <div class="text-center pt-5 timer-deals">
-                <div class="">
+                <div class="promo-box">
                     <h4 class="my-4">Maui</h4>
                     <button class="myButton mt-5">Lorem</button>
                     <h5 class="mt-2">From $88</h5>
@@ -287,7 +271,7 @@
             </div>
             <!-- Special 2 -->
             <div class="text-center pt-5 timer-deals">
-                <div class="">
+                <div class="promo-box">
                     <h4 class="my-4">Paris</h4>
                     <button class="myButton mt-5">Lorem</button>
                     <h5 class="mt-2">From $99</h5>
@@ -295,7 +279,7 @@
             </div>
             <!-- Special 3 -->
             <div class="text-center pt-5 timer-deals">
-                <div>
+                <div class="promo-box">
                     <h4 class="my-4">India</h4>
                     <button class="myButton mt-5">Lorem</button>
                     <h5 class="mt-2">From $75</h5>
