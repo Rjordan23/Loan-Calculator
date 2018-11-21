@@ -1,353 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Loan Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-dark">
 
-    <nav class="py-2">
-        <div class="container">
-            <!-- Upper nav section -->
-            <div class="row">
 
-                <!--  -->
-                <div class="col-lg-4 p-0">
-                    <img class="" src="images/logo/globe-trotter-1.png" alt="">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card card-body text-center mt-5">
+              <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+              <form id="loan-form">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                  </div>
                 </div>
-
-                <!--  -->
-                <div class="col-lg-3 text-lg-right pr-lg-3">
-                    <button class="myButton">Submit A Property</button>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">%</span>
+                    <input type="number" class="form-control" id="interest" placeholder="Interest">
+                  </div>
                 </div>
-                
-                <!--  -->
-                <div class="col-lg-5 row pt-2 px-0 text-center">
-                    <div class="col-lg-3 px-lg-0 dropdown">
-                        <p class="hand" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account <i class="fas fa-angle-down ml-1"></i></p>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Sign In</a>
-                            <a class="dropdown-item" href="#">Register an Account</a>
-                            <a class="dropdown-item" href="#">Account Help</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 px-lg-0 dropdown">
-                        <p class="hand" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support <i class="fas fa-angle-down ml-1"></i></p>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Customer Support</a>
-                            <a class="dropdown-item" href="#">Feedback</a>
-                            <a class="dropdown-item" href="#">FAQ</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-lg-0 text-center">
-                        <ul>
-                            <li class="mr-2"><a class="font-dark" href="#">My List</a></li>
-                            <li class="ml-2"><a class="font-dark" href="#">My Trots</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 p-lg-0">
-                        <img class="flag hand" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="images/flags/usa.png" alt="USA flag">
-                        <i class="fas fa-angle-down hand" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                        <div class="dropdown-menu pt-2 pb-0" aria-labelledby="dropdownMenuButton">
-                            <ul class="">
-                                <li class="dropdown-item"><img class="flag pb-2" src="images/flags/esp.png" alt=""> <a href="#">Spanish</a></li>
-                                <li class="dropdown-item"><img class="flag pb-2" src="images/flags/frn.png" alt=""> <a href="#">French</a></li>
-                                <li class="dropdown-item"><img class="flag pb-2" src="images/flags/ger.png" alt=""> <a href="#">German</a></li>
-                                <li class="dropdown-item"><img class="flag pb-2" src="images/flags/ita.png" alt=""> <a href="#">Italian</a></li>
-                                <li class="dropdown-item"><img class="flag" src="images/flags/brz.png" alt=""> <a href="#">Portugese</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="form-group">
+                  <input type="number" class="form-control" id="years" placeholder="Years To Repay">
                 </div>
-            </div>
-        </div>
-        <!-- Lower nav section -->
-        <div class="container">
-            <div class="row">
-                <ul id="options" class="m-0">
-                    <li><a class="font-dark" href="#">Flights</a></li>
-                    <li><a class="font-dark" href="#">Hotels</a></li>
-                    <li><a class="font-dark" href="#">Bundles</a></li>
-                    <li><a class="font-dark" href="#">Cars</a></li>
-                    <li><a class="font-dark" href="#">Cruises</a></li>
-                    <li><a class="font-dark" href="#">Things to Do</a></li>
-                    <li><a class="font-dark" href="#">Discover</a></li>
-                    <li><a class="font-dark" href="#">Vacation Rentals</a></li>
-                    <li><a class="font-dark" href="#">Deals</a></li>
-                    <li><a class="font-dark" href="#">Rewards</a></li>
-                    <li><a class="font-dark" href="#">Mobile</a></li>
-                    <li><a class="font-dark" href="#">Collection</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section data-vide-bg="beach" id="hero" class="">
-        <div class="">
-            <div class="search-form px-3 py-3 rounded">
-                <h2>Search Vaction Bundles</h2>
-                <div class="container">
-                    <div class="row">
-                        <!-- Flight + Hotel -->
-                        <div class="col-2 px-0 py-2 mr-1 text-center rounded myButton hand">
-                            <div>
-                                <i class="fas fa-plane d-inline mr-2"></i>
-                                <i class="fas fa-hotel d-inline ml-2"></i>
-                            </div>
-                            <div>
-                                <p class="m-0">Flight + Hotel</p>
-                            </div>
-                        </div>
-                        <!-- Flight + Car + Hotel -->
-                        <div class="col-3 py-2 mr-1 text-center rounded package-bkrnd hand">
-                            <div>
-                                <i class="fas fa-plane d-inline"></i>
-                                <i class="fas fa-hotel d-inline mx-3"></i>
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div>
-                                <p class="m-0">Flight + Hotel + Car</p>
-                            </div>
-                        </div>
-                        <!-- Flight + Car -->
-                        <div class="col-2 px-0 py-2 mr-1 text-center rounded package-bkrnd hand">
-                            <div>
-                                <i class="fas fa-plane d-inline mr-2"></i>
-                                <i class="fas fa-car ml-2"></i>
-                            </div>
-                            <div>
-                                <p class="m-0">Flight + Car</p>
-                            </div>
-                        </div>
-                        <!-- Flight + Car -->
-                        <div class="col-2 px-0 py-2 mr-1 text-center rounded package-bkrnd hand">
-                            <div>
-                                <i class="fas fa-hotel d-inline mx-2"></i>
-                                <i class="fas fa-car ml-2"></i>
-                            </div>
-                            <div>
-                                <p class="m-0">Hotel + Car</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="forn-group">
+                  <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                 </div>
-
-                <form action="#" class="mt-3">
-                    <div class="form-group">
-                        <div class="container">
-                            <!--  -->
-                            <div class="row">
-                                <div class="col-5 py-1 px-0 form-box">
-                                    <p class="col-12 m-0 ml-4">Origin</p>
-                                    <i class="fas fa-map-marked-alt col-1 px-0 mt-1 text-center"></i>
-                                    <input class="col-9" type="text" placeholder="City or Airport">
-                                    <i class="fas fa-times col-1"></i>
-                                </div>
-                                <div class="col-5 py-1 px-0 ml-1 form-box">
-                                    <p class="col-12 m-0 ml-3">Destination</p>
-                                    <i class="fas fa-map-marked-alt col-1 px-0 mt-1 text-center"></i>
-                                    <input class="col-9" type="text" placeholder="City or Airport">
-                                    <i class="fas fa-times col-1"></i>
-                                </div>
-                            </div>
-
-                            <!-- Times -->
-                            <div class="row mt-2">
-                                <div class="col-3 py-1 px-0 mr-1 form-box">
-                                    <p class="col-12 m-0 ml-4">Departing</p>
-                                    <i class="far fa-calendar-alt px-0 pl-2 mt-1 text-center"></i>
-                                    <input class="col-10 pl-2 pr-0" type="date" placeholder="mm/dd/yyyy">
-                                </div>
-                                <div class="col-3 py-1 px-0 mr-1 form-box">
-                                    <p class="col-12 m-0 ml-4">Returning</p>
-                                    <i class="far fa-calendar-alt px-0 pl-2 mt-1 text-center"></i>
-                                    <input class="col-10 pl-2 pr-0" type="date" placeholder="mm/dd/yyyy">
-                                </div>
-                                <div class="col-4 py-1 px-0 form-box">
-                                    <p class="col-12 m-0 ml-4">Travelers</p>
-                                    <i class="fas fa-users col-2 px-0 pl-2 mt-1 text-center"></i>
-                                    <!-- <input class="col-9 pr-0" type="text" placeholder="1 Adult, 0 Kids, 1 room"> -->
-                                    <select value="rooms">
-                                        <option name="1room" id="">1 Room</option>
-                                        <option name="2rooms" id="">2 Rooms</option>
-                                        <option name="3rooms" id="">3 Rooms</option>
-                                        <option name="4rooms" id="">4 Rooms</option>
-                                        <option name="5rooms" id="">5 Rooms</option>
-                                        <option name="6rooms" id="">6 Rooms</option>
-                                        <option name="plusSixRooms" id="">6+ Rooms</option>
-                                    </select>
-                                    <select class="" name="guest" id="">
-                                        <option value="1guest">1 Guest</option>
-                                        <option value="2guest">2 Guest</option>
-                                        <option value="3guest">3 Guest</option>
-                                        <option value="4guest">4 Guest</option>
-                                        <option value="5guest">5 Guest</option>
-                                        <option value="6guest">6 Guest</option>
-                                        <option value="7guest">7 Guest</option>
-                                        <option value="8guest">8 Guest</option>
-                                        <option value="9guest">9 Guest</option>
-                                        <option value="10guest">10+ Guest</option>
-                                    </select>
-
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <input class="d-inline mt-1 mr-2" type="checkbox">
-                                <p class="d-inline mb-3 special-font">I don't need a hotel for my entire trip</p>
-                            </div>
-                            <div class="row">
-                                <label class="col-12 m-0 p-0 special-font" for="#">Preferred class</label>
-                                <select class="rounded py-1 px-2" name="" id="">
-                                    <option value="#">First Class</option>
-                                    <option value="#">Business</option>
-                                    <option value="#">Premium Economy</option>
-                                    <option value="#">Economy/Coach</option>
-                                    <option value="#">Suprise Me</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row pt-3 pl-3">
-                            <!-- <div class="col-2 p-0 bg-light"> -->
-                            <button class=" myButton py-2 px-4 h5">Search</button>
-                            <div class="col-5 pl-3 pr-0">
-                                <p class="mb-0">Save up to $634</p>
-                                <p class="mb-0 h6">Book Flight + Hotel at the same time*</p>
-                            </div>
-                            <div>
-                                <img src="images/logo//2018-09-07_20h32_25.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <section id="rental-promo">
-        <div class="rental-car">
-            <img src="images/2016-Ford-Mustang-2.png" alt="">
-        </div>
-        <div class="rental-sale">
-            <h4>Limited Time </h4>
-            <h3 class="">RENTAL CAR <span class="text-primary">Sale!</span></h3>
-            <h4 class="">Save up to 25% on Rentals</h4>
-        </div>
-        <div class="rental-cta">
-            <ul class="">
-                <li><img src="images/logo/davis.png" alt=""></li>
-                <li><img src="images/logo/cheapo.png" alt=""></li>
-            </ul>
-            <ul>
-                <li><img src="images/logo/last-dollar.png" alt=""></li>
-                <li><img src="images/logo/risky.png" alt=""></li>
-            </ul>
-            <div class="">
-                <button class="myButton">Reserve Now</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hotel Promo -->
-    <section id="hotel-promo" class="pb-3">
-        <div class="pl-5 mb-3">
-            <h4 class="d-inline ml-5">Don't let these great hotels slip away </h4>
-            <h4 class="d-inline">Time left: <span id="timer"></span></h4>
-        </div>
-
-        <div id="hotel-specials" class="px-0">
-            <!-- Special 1 -->
-            <div class="text-center pt-5 timer-deals">
-                <div class="promo-box">
-                    <h4 class="my-4">Maui</h4>
-                    <button class="myButton mt-5">Lorem</button>
-                    <h5 class="mt-2">From $88</h5>
+              </form>
+              <!-- LOADER -->
+              
+              <div id="loading">
+                <img src="img/loading.gif" alt="">
+              </div>
+             
+              <!-- RESULTS -->
+              <div id="results" class="pt-4">
+                <h5>Results</h5>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Monthly Payment</span>
+                    <input type="number" class="form-control" id="monthly-payment" disabled>
+                  </div>
                 </div>
-            </div>
-            <!-- Special 2 -->
-            <div class="text-center pt-5 timer-deals">
-                <div class="promo-box">
-                    <h4 class="my-4">Paris</h4>
-                    <button class="myButton mt-5">Lorem</button>
-                    <h5 class="mt-2">From $99</h5>
+  
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Total Payment</span>
+                    <input type="number" class="form-control" id="total-payment" disabled>
+                  </div>
                 </div>
-            </div>
-            <!-- Special 3 -->
-            <div class="text-center pt-5 timer-deals">
-                <div class="promo-box">
-                    <h4 class="my-4">India</h4>
-                    <button class="myButton mt-5">Lorem</button>
-                    <h5 class="mt-2">From $75</h5>
+  
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Total Interest</span>
+                    <input type="number" class="form-control" id="total-interest" disabled>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div id="email-campaign">
-            <div>
-                <h5>Get the lowest rates first</h5>
-                <p>Subscribe and save with email only hotel deals</p>
-            </div>
-            <div>
-                <input type="text" placeholder="Your email address">
-                <button class="myButton">Sign Up</button>
-            </div>
-        </div>
-    </section>
-
-    <!--  -->
-    <section id="mobile-app" class="py-3">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 pt-lg-4 pl-lg-0">
-                <div class="pl-5">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-                    <h5 class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptate vitae. Aut, unde. Corporis ad porro voluptas consequatur facere dolorem sint fugiat odit, quisquam nihil!</h5>
-                    <img class="d-inline apps" src="images/logo/apple.png" alt="">
-                    <img class="d-inline apps" src="images/logo/google.png" alt="">
-                </div>
-                <img id="stripe" src="images/Vacation-Beach-PNG-Background-Image1-1024x297.png" alt="">
-
-                </div>
-                <!-- Right Side -->
-                <div class="phones col-lg-6 mt-2 text-center">
-                    <img class="" src="images/iphone-x-and-note-9-png-13.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="travel-section">
-        <!--  -->
-        <div class="box box0"><p>Yellow</p></div>
-        <!--  -->
-        <div class="box box1"><p>Red</p></div>
-        <!--  -->
-        <div class="box box2"><p>Blue</p></div>
-        <!--  -->
-        <div class="box box3"><p>Green</p></div>
-        <!--  -->
-        <div class="box box4"><p>Orange</p></div>
-        <div class="box box5"><p>Purple</p></div>
-        <div class="box box6"><p>Tan</p></div>
-        <div class="box box7"><p>Gold</p></div>
-        <div class="box box8"><p>Teal</p></div>
-        <div class="box box9"><p>Silver</p></div>
-    </section>
-
-    <div id="test">
-
-    </div>
-
-
-    <footer class="">
-        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat.</p>
-    </footer>
+      </div>
 
 
 
@@ -356,31 +78,15 @@
 
 
 
-    
-    <!-- <div class="login-form">
-        <h2>Sign In</h2>
-        <div class="form-input">
-            <input type="text" name="" placeholder="Email">
-        </div>
-        <div class="form-input">
-            <input type="password" name="" placeholder="Password">
-        </div>
-        <div class="form-input">
-            <input type="submit" name="" value="Login">
-        </div>
-        <a href="#" class="forget">Forgot Password</a>
-    </div> -->
-    
-    <!-- Its Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!-- Mp4 -->
-    <script src="jquery.vide.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
 
 </body>
 </html>
